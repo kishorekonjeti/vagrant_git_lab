@@ -33,4 +33,4 @@
 ### accessing gitlab web UI
   open "http://localhost:8080/" url in  your browser and set "root" user password
 
-  and s
+  
