@@ -10,25 +10,26 @@ sudo echo "LC_ALL=en_US.utf-8" >> /etc/environment
 SCRIPT
 
 
-$gitscript = <<-SCRIPT
-sudo yum install curl policycoreutil-python openssh-server
-sudo install postfix -y
+$jenkinsscript = <<-SCRIPT
 
-sudo systemctl start postfix
-sudo systemctl enable postfix
+sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo
 
-sudo curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.rpm.sh | sudo bash
+sudo rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
 
-sudo yum install -y gitlab-ce
+sudo yum install java-1.8.0-openjdk -y 
 
-sudo gitlab-ctl reconfigure
+sudo yum install jenkins -y 
+
+sudo service firewalld restart
+sudo service jenkins start
+sudo chkconfig jenkins on 
 
 SCRIPT
 
-# sudo firewall-cmd --add-service=http
-# sudo firewall-cmd --add-service=https
-# sudo firewall-cmd --permanant --add-service=http
-# sudo firewall-cmd --permanent --add-service=https
+##Firewall Exceptions
+# sudo firewall-cmd --permanent --add-port=8080/tcp
+# sudo firewall-cmd --zone=public --add-service=http --permanent
+# sudo firewall-cmd --reload
 
 
 Vagrant.configure("2") do |config|
@@ -42,23 +43,23 @@ Vagrant.configure("2") do |config|
 
     # Memory and CPU allocation
     config.vm.provider "virtualbox" do |v|
-    v.memory = 2048
-    v.cpus = 2
+    v.memory = 1048
+    v.cpus = 1
     end
 
     # IP allocation
     # config.vm.network "private_network", ip: "192.168.22.10", virtualbox__intnet: "mynetwork01"
 
     # port forwarding
-    config.vm.network "forwarded_port", guest: 80, host: 8080
+    config.vm.network "forwarded_port", guest: 8080, host: 8000
     config.vm.network "forwarded_port", guest: 443, host: 4430
     config.vm.network "forwarded_port", guest: 22, host: 8022
 
 
     # Host name allocation
-    config.vm.hostname = "gitlab.example.com"
+    config.vm.hostname = "jenkins.example.com"
 
     # Installing required packages for ansible controller node
     config.vm.provision "shell", inline: $commonscript
-    config.vm.provision "shell", inline: $gitscript
+    config.vm.provision "shell", inline: $jenkinsscript
 end
