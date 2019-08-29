@@ -1,6 +1,6 @@
 ## IaaC project : git_lab  
- A Vagrantfile to build signle node virtual envirnment to learn about jenkins adminstration for  CI/CD projects  
- vagrant_jenkins_lab/Vagrantfile  : This Vagrantfile contains the information needed to create a centOS/7 virtual machine and install git_lab
+ A Vagrantfile to build signle node virtual envirnment to learn about gitlab adminstration or git client  commands or CI/CD projects  
+ vagrant_git_lab/Vagrantfile  : This Vagrantfile contains the information needed to create a centOS/7 virtual machine and install git_lab
 
 
 ### Steps :  
@@ -9,19 +9,19 @@
   Step 2 :  Install vagrant  (https://www.vagrantup.com)
 
   Step 3 :  Download and  Vagrant file  
-       git clone https://github.com/malyabee/vagrant_jenkins_lab.git
+       git clone https://github.com/malyabee/vagrant_git_lab.git
           or 
-       Downlaod https://github.com/malyabee/vagrant_jenkins_lab/archive/master.zip and unzip master file 
+       Downlaod https://github.com/malyabee/vagrant_git_lab/archive/master.zip and unzip master file 
        
 
   Step 4  : starting virtual machines 
 
-       $ cd vagrant_jenkins_lab
+       $ cd vagrant_git_lab
  
        $ vagrant up
 
 ### commands to login three virtual machines
-     cd vagrant_jenkins_lab
+     cd vagrant_git_lab
 
      vagrant ssh 
 
@@ -31,6 +31,6 @@
 
 
 ### accessing gitlab web UI
-  open "http://localhost:8000/" url in  your browser to see jenkins environment.
+  open "http://localhost:8080/" url in  your browser and set "root" user password
 
   
