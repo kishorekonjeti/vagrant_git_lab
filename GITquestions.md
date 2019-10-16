@@ -4,11 +4,11 @@
  - [ ] git --v
  - [ ] git --current
  - [ ] git --options
- - [ ] git --version
+ - [x] git --version
  
 *Q2. What command would you use to create a new git repository ?*
  
- - [ ] git init
+ - [x] git init
  - [ ] git add
  - [ ] git start
  - [ ] git new
@@ -17,7 +17,7 @@
 
      git remote -v
 
- - [ ] A list of remote repositories you are connected to
+ - [x] A list of remote repositories you are connected to
  - [ ] The last 5 git versions you've installed
  - [ ] The current git version you're running
  - [ ] An inline editor for modifing remote repositories
@@ -57,7 +57,7 @@ Q7.  Take a look at the git commands below and determine what the operation is d
     $ git bisect bad  54d4140abc4d2a76fdaab3w3sdfladfs
     $ git bisect good 69faa620daab3w3sabc4d2a7d2a76f
 
- - [ ] Running a bisect that performs a binary search between two commits
+ - [x] Running a bisect that performs a binary search between two commits
  - [ ] Marking a commit as bad for later deletion
  - [ ] Marking a commit as good and resetting the HEAD
  - [ ] Running a merge that favors the commit marked good
@@ -69,7 +69,7 @@ Q8.  After pushing commits to the remote repository for the first time using the
     git push -u origin master
 
  - [ ] git push origin
- - [ ] git push
+ - [x] git push
  - [ ] same as before, git push -u origin master
  - [ ] git push master
 
@@ -83,7 +83,7 @@ Q9.  What is the status of the beta-notes.js file in the following output?
  - [ ] beta-notes.js is untracked and has been modified
  - [ ] beta-notes.js is untracked but has been added to the current commit.
  - [ ]  beta-notes.js is tracked, and the modified file has beed added to the current commit
- - [ ] beta-notes.js is a tracked file and has been modified, but han not been added to the current commit
+ - [x] beta-notes.js is a tracked file and has been modified, but han not been added to the current commit
 
 Ans : 
 
@@ -91,7 +91,7 @@ Ans :
 
  - [ ] Use git reset --soft HEAD to roll back one commit
  - [ ] Run git rebase to move the current commit to its original location
- - [ ] Run git branch -d to delete the merged branch
+ - [x] Run git branch -d to delete the merged branch
  - [ ] use git clear-all to cleanup any hanging files
 
 
@@ -100,14 +100,14 @@ Ans :
 
 Q11. Which of the following is true of the git push command ?
 
- - [ ] By default a push doesn't send tags to the remote repository.
+ - [x] By default a push doesn't send tags to the remote repository.
  - [ ] Commits can only be tagged when they are created
  - [ ] Only annotated tags are automatically pushed to the remote repository with a cimmit
  - [ ] Tags are pushed to the remote repository with their respective commits.
 
 Q12. You're in the middle of modifying a file when you're unexpectedly assigned an urgent bug fix on another branch. What would you do to temporarily save the work your doing locally without commiting ?
 
- - [ ] Use git stash to save your work and come back later and reapply the stashed commit.
+ - [x] Use git stash to save your work and come back later and reapply the stashed commit.
  - [ ] You cannot save locally without committing , so this is not possible
  - [ ] Save your work with git local-cache.
  - [ ] Run git hold to save a local copy of what you're doing to return to later.
@@ -122,7 +122,7 @@ Q13.  How would you create a custom shortcut or command across your git environm
 Q14. What command lets you create a connection between a local and remote repository ?
 
  - [ ] git remote origin
- - [ ] git remote add origin
+ - [x] git remote add origin
  - [ ] git remote new origin
  - [ ] git remote add new
 
@@ -134,14 +134,14 @@ Q15.  What files is the following .gitignore programmed to leave out?
     *.metadata
 
  - [ ] Only files with .swift and .txt extensions.
- - [ ] All files in the build directory, as well as files ending with .txt or .metadata
+ - [x] All files in the build directory, as well as files ending with .txt or .metadata
  - [ ] Only the build directory.
  - [ ] All file with  a .swift, .txt or .metadata file extension , as well as the entire build directory
 
 Q16.  If you cloned an existing git repository what would happen ?
 
  - [ ] A copy of the repository would be created on the hosting platform
- - [ ] A copy of the repository would be created on your local machine
+ - [x] A copy of the repository would be created on your local machine
  - [ ] A new copy would overwrite the central repository
  - [ ] Nothing cloning is not a supported git function
 
@@ -149,14 +149,14 @@ Q17. Suppose you needed to see a list of all files that had been modified or add
 
  - [ ] Run git commit --info with the commit hash
  - [ ] find the commit in the remote repository, as that's the only place that kind of information is stored
- - [ ] Use the diff-tree command with the commit hash
+ - [?] Use the diff-tree command with the commit hash
  - [ ] Access the commit stash data with git stash
 
 Q18. Your current project has several branches; master, beta and push-notifications. You've just finished the notification feature in the push-notification branch, and you want to commit it to the beta branch. How can you accomplish this ?
 
  - [ ] Checkout the beta branch and run git merge push-notifications.
  - [ ] Checkout the master branch and run merge beta -> push-notifications
- - [ ] checkout the push-notifications branch and run git merge beta
+ - [x] checkout the push-notifications branch and run git merge beta
  - [ ] Delete the push-nofifications branch and it will be committed to the master branch automatically.
 
 Q19. Why would you use a pre-receive hook in your remote repolitory ?
@@ -198,7 +198,7 @@ Q22.  What option can you use to apply git configurations across your entire git
       
       git add -A
  
- - [ ] Only updated files are staged.
+ - [x] Only updated files are staged.
  - [ ] All new files are staged.
  - [ ] Files are staged in alphabetical order
  - [ ] All new and updated files are staged
@@ -208,7 +208,7 @@ Q24. After you make changes to a tracked file, you run the following command. Wh
       git commit  -a -m "Refactor code base"
 
  - [ ] Adds all new files to the staging area
- - [ ] Adds all modified files to the staging area then commits them with a message
+ - [x] Adds all modified files to the staging area then commits them with a message
  - [ ] Nothing, you can't use multple options in the same command
  - [ ] commits all new files with a message
 
@@ -216,13 +216,13 @@ Q25. You find a bug in your project, but can't locate where it was introduced in
 this problem ?
 
  - [ ] Run a git rebase to find the buggy commit.
- - [ ] Use git bisect to compare the buggy commit to an early commit that works as expected.
+ - [x] Use git bisect to compare the buggy commit to an early commit that works as expected.
  - [ ] Manually backtrack through your commit history
  - [ ] Use git search -diff to compare all commits in your repository history.
 
 Q26. What is the best way to characterize the git commit structure?
 
- - [ ] Data snapshot
+ - [?] Data snapshot
  - [ ] Data log
  - [ ] Data dictionary
  - [ ] Data array
