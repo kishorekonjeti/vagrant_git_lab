@@ -222,8 +222,48 @@ this problem ?
 
 Q26. What is the best way to characterize the git commit structure?
 
- - [?] Data snapshot
+ - [ ] Data snapshot ?
  - [ ] Data log
  - [ ] Data dictionary
  - [ ] Data array
 
+Q27.  Where are files stored before they are committed to the local repository
+
+ - [ ] Saved files
+ - [ ] git documents
+ - [ ] git cache
+ - [ ] Staging area
+ 
+ Q28.  After checking your git status you get the following output, which shows the file beta-notes.js in the commit but also unstaged. How can this situation occur ?
+ 
+     Changes to be commited :
+     (use " git reset HEAD <file>..." to unstage)
+     
+     modified: beta-notes.js
+     
+     Changes not staged for commit:
+     (use "git add <file>..." to updated what will be committed)
+     (use "git  checkout -- <file>..." to discard changes in working directory)
+     
+     modified: beta-notes.js
+     
+ - [ ] There are two tracked copies of beta-notes.js, but one was removed from the commit.
+ - [ ] Two copies of beta-notes.js were created , only one is being tracked.
+ - [ ] There were tow copies of beta-notes.js, but one was deleted.
+ - [ ] beta-notes.js was staged, then modified afterwards, creating two different versions of the file.
+ 
+ Q29. Why would the followin command be used?
+ 
+         git rebase -i HEAD~10
+         
+ - [ ] to delete the last 10 commits and resets the HEAD
+ - [ ] in order to locally cache the last 10 commits
+ - [ ] To run a comparative search of the last 10 commits for differences
+ - [ ] To list the last 10 commits and modify them with either the squash or fixup commnad
+ 
+ Q30. You've just restored some stashed commits you were  working on early,  but you want to carry them over into their own branch. How could you do that?
+ 
+ - [ ] Add teh stashed commits to the current commit, then create a new branch.
+ - [ ] Use git checkout -b .
+ - [x] Run git stash branch <branch name>
+ - [ ] git branch  <stash hash>
