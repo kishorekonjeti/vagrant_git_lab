@@ -183,7 +183,7 @@ Q21.  Looking at the following commands, describe what is happening.
        git cherry-pick  {af5597c29sdfjas7adjskdlfai34klad}
 
  - [ ] The commit is being tagged for release on the feature-user-location branch
- - [ ] A commit is being copied from its original branch over to the feature-user-location branch.
+ - [x] A commit is being copied from its original branch over to the feature-user-location branch.
  - [ ] A commit is being copied from the feature-user-location to the master branch.
  - [ ] The commit is being cherry picked as the new HEAD of the commit history.
 
